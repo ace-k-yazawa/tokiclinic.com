@@ -1,0 +1,142 @@
+#main-visual
+
+#container
+  .medical-info
+    h2 診療のご案内
+    ul.medical-menu
+      li
+        = link_to 'dermatology.html' do
+          .medical-icon
+            = image_tag 'medical_menu01.png'
+          .link-texts
+            | 皮膚科
+      li
+        = link_to 'orthopedics.html' do
+          .medical-icon
+            = image_tag 'medical_menu02.png'
+          .link-texts
+            | 整形外科
+      li
+        = link_to 'other.html' do
+          .medical-icon
+            = image_tag 'medical_menu03.png'
+          .link-texts
+            | その他の治療・手術
+      li
+        = link_to 'laser.html' do
+          .medical-icon
+            = image_tag 'medical_menu04.png'
+          .link-texts
+            | レーザー脱毛
+      li
+        = link_to 'skincare.html' do
+          .medical-icon
+            = image_tag 'medical_menu05.png'
+          .link-texts
+            | スキンケアセンター
+
+  .top-greeting
+    .greeting-inner
+      .image
+        / = image_tag 'greeting_image.jpg'
+      .messages
+        h2 ごあいさつ
+        p
+          | 皆様が納得いくような説明、診療を心掛けています。来てよかったと言っていただけるよう努力して参ります。
+
+  .news
+    .news-inner
+      h2 お知らせ 
+      ul.news
+        li
+          | 2022年1月29日土曜日を臨時休診させていただきます。
+          br
+          | ご迷惑をお掛けして申し訳ありません。
+        li
+          | 発汗を抑える20%塩化アルミニウムジェルの取り扱いを始めました。
+          br
+          | 30cc 440円（税込）です。
+        li
+          | ケミカルピーリングで最初からサリチル酸マクロゴール使用を希望される場合の料金設定を行いました。
+
+  .info
+    .info-inner
+      .clinic-info
+        .info-logo = link_to(image_tag('logo.png', class: 'logo'), 'index.html')
+        .address
+          p
+            | 大阪市中央区本町3-4-14 デイライト本町ビル1F/BF
+            br
+            | 地下鉄御堂筋線本町駅３番出口より徒歩１分
+            br
+            | 徒歩２分のホテルヴィアーレ大阪の地下に市営駐車場があります。
+          p
+            | tel.06-6263-2788　 fax.06-6263-2768
+      .schedule
+        .schedule-details
+          h4 とき皮膚科整形外科医院
+          table
+            tbody
+              tr
+                th 診療時間
+                th 月
+                th 火
+                th 水
+                th 木
+                th 金
+                th 土
+                th 日
+              tr
+                th 11:00〜19:00
+                th ○
+                th ○
+                th ○
+                th 休診
+                th ○
+                th
+                  | 11:00
+                  br
+                  span 〜
+                  br
+                  | 14:00
+                th 休診
+          ul.caution
+            li ※木・日・祝日は休診致します。
+            li ※火曜日はスキンケアセンター長の土岐真理子医師の診療日になります。
+            li ※火曜日は皮膚科のみの診療になります。
+            li ※保険診療については予約制ではありません。昼休みはありません。
+        .schedule-details
+          h4 スキンケアセンター
+          table
+            tbody
+              tr
+                th 診療時間
+                th 月
+                th 火
+                th 水
+                th 木
+                th 金
+                th 土
+                th 日
+              tr
+                th 11:00〜20:00
+                th ○
+                th ○
+                th ○
+                th 休診
+                th ○
+                th
+                  | 11:00
+                  br
+                  span 〜
+                  br
+                  | 18:00
+                th 休診
+          ul.caution
+            li ※スキンケアセンターは予約制です。ご予約はお電話にて承ります。
+            li ※お昼休みはありません。
+
+  .map
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.8458584608607!2d135.4994861152318!3d34.68383958043878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e71e07e3ca53%3A0x17b8bd32998f5fea!2z44CSNTQxLTAwNTMg5aSn6Ziq5bqc5aSn6Ziq5biC5Lit5aSu5Yy65pys55S677yT5LiB55uu77yU4oiS77yR77yU!5e0!3m2!1sja!2sjp!4v1614133945400!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+

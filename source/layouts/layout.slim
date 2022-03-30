@@ -1,0 +1,84 @@
+doctype html
+html lang="ja"
+  head
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    meta charset="UTF-8"
+    meta name="Viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no"
+    title とき皮膚科整形外科医院 スキンケアセンター
+    link rel="stylesheet" href="stylesheets/site.css"
+    link rel="stylesheet" href="stylesheets/jquery.mmenu.all.css"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="javascripts/jquery.mmenu.all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ja.js"></script>
+
+
+
+  body
+    #header
+      ul.nav
+        li
+          h1
+            = link_to(image_tag('logo.png', class: 'logo'), 'index.html')
+        li = link_to '皮膚科', 'dermatology.html'
+        li = link_to '整形外科', 'orthopedics.html'
+        li = link_to 'その他の治療・手術', 'other.html'
+        li = link_to 'レーザー脱毛', 'laser.html'
+        li = link_to 'スキンケアセンター', 'skincare.html'
+
+    #mobile-header
+      h1 = link_to(image_tag('logo.png', class: 'logo'), 'index.html')
+      .nav-btn
+        = link_to '#menu' do
+          i.fas.fa-bars.fa-2x
+      #menu
+        ul
+          li = link_to '皮膚科', 'dermatology.html'
+          li = link_to '整形外科', 'orthopedics.html'
+          li = link_to 'その他の治療・手術', 'other.html'
+          li = link_to 'レーザー脱毛', 'laser.html'
+          li = link_to 'スキンケアセンター', 'skincare.html'
+          li = link_to '当院の方針について', 'feature.html'
+          li = link_to 'ドクター紹介', 'doctor.html'
+          li = link_to 'アクセス', 'https://maps.google.co.jp/maps?q=%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%9C%AC%E7%94%BA3-4-14+%E3%83%87%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E6%9C%AC%E7%94%BA%E3%83%93%E3%83%AB1F&sugexp=chrome,mod%3D0&um=1&ie=UTF-8&hl=ja&sa=N&tab=wl', target: '_blank'
+          li = link_to 'とき皮フ科(西宮市夙川)', 'http://www.tokiskinclinic.com/', target: '_blank'
+
+    = yield
+
+    #footer
+      ul
+        li = link_to '皮膚科', 'dermatology.html'
+        li = link_to '整形外科', 'orthopedics.html'
+        li = link_to 'その他の治療・手術', 'other.html'
+        li = link_to 'レーザー脱毛', 'laser.html'
+        li = link_to 'スキンケアセンター', 'skincare.html'
+        li
+          ul
+            li = link_to '当院の方針について', 'feature.html'
+            li = link_to 'ドクター紹介', 'doctor.html'
+            li = link_to 'アクセス', 'https://maps.google.co.jp/maps?q=%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E6%9C%AC%E7%94%BA3-4-14+%E3%83%87%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E6%9C%AC%E7%94%BA%E3%83%93%E3%83%AB1F&sugexp=chrome,mod%3D0&um=1&ie=UTF-8&hl=ja&sa=N&tab=wl', target: '_blank'
+            li = link_to 'とき皮フ科(西宮市夙川)', 'http://www.tokiskinclinic.com/', target: '_blank'
+      .copy
+        p TOKI CLINIC & HISTORIE CO.LTD.
+
+javascript:
+  jQuery(document).ready(function($) {
+    $("#menu").mmenu({
+      "extensions": [
+        "position-right"
+      ]
+    });
+  });
+  jQuery(document).ready(function($) {
+    $('.modalCheck').on('change', function(){
+      if($(this).is(':checked')){
+        $('body').css('overflow','hidden');
+      } else {
+        $('body').css('overflow','auto');
+      }
+    });
+  });
+  
+  

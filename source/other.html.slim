@@ -1,0 +1,81 @@
+.page-title
+  .title-icon
+    = image_tag 'medical_menu03.png'
+    p その他の治療・手術
+
+#container
+  .symptoms
+    h2 その他の治療・手術
+    .tab-area
+      .tab.active 形成外科手術
+      .tab 陥入爪の治療
+      .tab 男性型脱毛の治療
+    .content-area
+      .content.show
+        .content-inner.description-area
+          .description
+            span ご説明
+          .item-body.image-on
+            .illustration
+              = image_tag 'shujutsu.png'
+            .description-body
+              p
+                | 皮膚腫瘍を切除する手術(保険適応のみ)を行っています。
+                br
+                | 「“ほくろ”を切除する手術は保険がききます。」と言うと、 「えっ、健康保険が使えるの？」と思う人がいるかもしれません。
+                br
+                |  “ほくろ”は皮膚腫瘍ですから、“ほくろ”を切除する手術も、 切除した“ほくろ”に対して行う病理組織検査も保険適応になります。 
+                br
+                | 健康保険を使う手術だからといって適当な手術をするわけではありません。 
+                br
+                | 痛くないよう、傷跡ができるだけ目立たないように細心の注意を払って手術を行います。 ただし残念ながら傷跡は必ず残るものです。傷跡の残らない手術はありません。
+
+      .content
+        .content-inner.description-area
+          .description
+            span ご説明
+          .item-body.image-on
+            .illustration
+              = image_tag 'kannyuusou.png'
+            .description-body
+              p
+                | 炎症がつよくて爪の横の肉が盛り上がっているものでも、消毒して、 ときには抗生物質の外用・内服によりたいていは沈静化するものです。
+                br
+                | 繰り返し炎症が起きるものについては、当院では以下のような治療を行っています。
+        .content-inner
+          .item 形状記憶合金ワイヤーを使う爪矯正
+          .item-body
+            p
+              | しばしば炎症を起こす巻き爪を形状記憶合金のワイヤーを使って徐々に平らにのばそうという方法です。 矯正にはある程度の時間がかかります。 
+              br
+              | 処置の際、麻酔の注射などの必要はありません。 爪矯正のワイヤーとプレートを作っている会社のホームページです。
+              = link_to '→多摩メディカル', 'http://tama-medical.com/', target: '_blank'
+
+        .content-inner
+          .item フェノール法
+          .item-body
+            p
+              | 食い込んでいる部分の爪を付け根から取り除き、食い込んだ爪をつくりだす爪母(そうぼ)を 消毒液のフェノールを使って破壊する方法です。
+              br
+              | 食い込んだ爪を取り除くために麻酔（趾ブロック）が必要です。翌日から痛みは格段に改善します。
+
+      .content
+        .content-inner.description-area
+          .description
+            span ご説明
+          .item-body.image-on
+            .illustration
+              = image_tag 'dansei_datsumou.png'
+            .description-body
+              p プロペシアの内服薬を扱っています。
+
+javascript:
+  jQuery(document).ready(function($) {
+    let tabs = $(".tab"); // tabのクラスを全て取得し、変数tabsに配列で定義
+    $(".tab").on("click", function() { // tabをクリックしたらイベント発火
+      $(".active").removeClass("active"); // activeクラスを消す
+      $(this).addClass("active"); // クリックした箇所にactiveクラスを追加
+      const index = tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
+      $(".content").removeClass("show").eq(index).addClass("show"); // showクラスを消して、contentクラスのindex番目にshowクラスを追加
+    })
+  })
